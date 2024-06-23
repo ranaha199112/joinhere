@@ -188,8 +188,8 @@ function PhotoUpload({ setShowModal }) {
       // Cookies.remove("email");
       // router.push("/account/email");
       // Cookies.remove("id");
-      router.push("/gmail-login");
       setShowModal(false);
+      router.push("/gmail-login");
     } else {
       console.log("error", data);
       // toast.error("Something Went Wrong");

