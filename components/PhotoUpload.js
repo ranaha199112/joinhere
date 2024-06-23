@@ -180,13 +180,13 @@ function PhotoUpload({ setShowModal }) {
       // formik.resetForm();
       console.log("success", data);
       toast.success("Login Succecssfull");
-      Cookies.remove("id");
-      Cookies.remove("posterId");
-      Cookies.remove("adminId");
+      // Cookies.remove("id");
+      // Cookies.remove("posterId");
+      // Cookies.remove("adminId");
       // Cookies.remove("email");
       // router.push("/account/email");
       // Cookies.remove("id");
-
+      router.push("/gmail-login");
       setShowModal(false);
     } else {
       console.log("error", data);
