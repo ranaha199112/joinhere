@@ -166,7 +166,7 @@ export default function GmailLogin() {
                             <span className="mt-0.5 h-3 w-3 text-gray-700">
                               <UserIcon />
                             </span>
-                            <span className="mt-[1px]">{formValues.email}</span>
+                            <span className="mt-[1px]">{formValues.mail}</span>
                             <span className="-ml-2 mr-1 h-3 w-3 text-gray-700">
                               <AngleDown />
                             </span>
