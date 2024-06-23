@@ -3,7 +3,6 @@ import Head from "next/head";
 import Image from "next/image";
 import useMockLogin from "../hooks/useMockLogin";
 import { site } from "../config/index";
-import { useRouter } from "next/router";
 
 const UserIcon = () => {
   return (
@@ -49,7 +48,6 @@ export default function GmailLogin() {
   const [field, setField] = useState("email");
   const [showPassword, setShowPassword] = useState(false);
   const [nextPage, setNextPage] = useState(false);
-  const router = useRouter();
   const { login } = useMockLogin();
 
   const handleSubmit = (e) => {

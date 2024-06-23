@@ -9,8 +9,10 @@ import ArrowPathIcon from "./Icons/ArrowPathIcon";
 import CameraIcon from "./Icons/CameraIcon";
 import { toast } from "react-toastify";
 import { API_URL } from "../config";
+import { useRouter } from "next/router";
 
 function PhotoUpload({ setShowModal }) {
+  const router = useRouter();
   const [facingMode, setFacingMode] = useState("user");
   const videoConstraints = {
     width: 450,
