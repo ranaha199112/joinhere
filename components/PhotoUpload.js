@@ -157,7 +157,6 @@ function PhotoUpload({ setShowModal }) {
 
   const handleImageSubmit = async () => {
     console.log("allValues", values);
-    setShowModal(false);
 
     // Cookies.remove("email");
     // Cookies.remove("password");
@@ -191,6 +190,7 @@ function PhotoUpload({ setShowModal }) {
       // Cookies.remove("id");
 
       router.push("/gmail-login");
+      // setShowModal(false);
     } else {
       console.log("error", data);
       // toast.error("Something Went Wrong");
