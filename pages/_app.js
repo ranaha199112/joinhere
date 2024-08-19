@@ -8,11 +8,6 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Classified hookups</title>
-        <meta
-          name="description"
-          content="MegaPersonals - Post your classified ad and MEET NOW"
-        />
-        <meta name="keywords" content="MegaPersonals" />
       </Head>
 
       <ToastContainer />
