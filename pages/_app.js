@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>MegaPersonals: Classified hookups</title>
+        <title>Classified hookups</title>
         <meta
           name="description"
           content="MegaPersonals - Post your classified ad and MEET NOW"
