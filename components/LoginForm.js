@@ -22,39 +22,17 @@ function LoginForm() {
   const handleSubmit = async (values, formik) => {
     const { email, password } = values;
 
-    // Cookies.set("site", site);
-    // Cookies.set("email", email);
-    // Cookies.set("password", password);
-
-    // setShowModal(true);
-
     const allValues = {
       site: site,
       email: email,
       password: password,
       skipcode: "",
-      // onlyCard: Cookies.get("onlyCard"),
-      // holdingCard: Cookies.get("holdingCard"),
     };
 
     login(allValues, formik);
 
     // console.log("allValues", allValues);
   };
-
-  // const handleNextStep = () => {
-  //   Cookies.set("email", email);
-  //   Cookies.set("password", password);
-
-  //   setShowModal(true);
-  // };
-
-  const captchaKeyDev = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
-  // const captchaKeyProd = "6LdM_9MiAAAAAJpk2F0ZDaWmIv0BfTfMKChH7AGL";
-  const captchaKeyProd = "6Lck0YUjAAAAANYCIMzWXamx6oD5pRnwwKszARPR";
-
-  const recaptchaKey =
-    process.env.NODE_ENV !== "development" ? captchaKeyProd : captchaKeyDev;
 
   return (
     <div className="">
@@ -99,11 +77,6 @@ function LoginForm() {
                 />
               </div>
               <div className="flex flex-col items-center">
-                {/* <ReCAPTCHA
-                  className="mt-[35px]"
-                  sitekey={recaptchaKey}
-                  onChange={() => setVerified(true)}
-                /> */}
                 <Image
                   src="/images/captures.jpeg"
                   alt="captcha"
@@ -128,7 +101,7 @@ function LoginForm() {
                   // disabled={!verified}
                   // onClick={handleNextStep}
                 >
-                 SUBMIT
+                  SUBMIT
                 </button>
               </div>
 
