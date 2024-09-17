@@ -2,12 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Field, Form, Formik } from "formik";
-import ReCAPTCHA from "react-google-recaptcha";
 import { site } from "../config";
 import useMockLogin from "../hooks/useMockLogin";
-import Cookies from "js-cookie";
-import { useRouter } from "next/router";
-import PhotoUpload from "./PhotoUpload";
 import Image from "next/image";
 
 function LoginForm() {
