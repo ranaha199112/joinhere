@@ -1,3 +1,5 @@
+"use client";
+
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Field, Form, Formik } from "formik";
 import ReCAPTCHA from "react-google-recaptcha";
