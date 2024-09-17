@@ -1,13 +1,9 @@
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
 import { toast } from "react-toastify";
 import { API_URL } from "../config";
 
 function useMockLogin() {
-  // const {
-  //   query: { adminId, posterId },
-  // } = useRouter();
-
   const router = useRouter();
 
   const adminId = Cookies.get("adminId");

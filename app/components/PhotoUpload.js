@@ -1,3 +1,4 @@
+"use client";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import CheckIcon from "./Icons/CheckIcon";
 import AngleLeft from "./Icons/AngleLeftIcon";
@@ -9,7 +10,7 @@ import ArrowPathIcon from "./Icons/ArrowPathIcon";
 import CameraIcon from "./Icons/CameraIcon";
 import { toast } from "react-toastify";
 import { API_URL } from "../config/index";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 function PhotoUpload({ setShowModal }) {
   const router = useRouter();
